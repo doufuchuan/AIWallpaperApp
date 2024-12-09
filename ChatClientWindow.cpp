@@ -73,7 +73,7 @@ ChatClientWindow::ChatClientWindow(QWidget *parent)
 
     // Retrieve the API key from the environment variable
     QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
-    QString apiKey = "eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFM1MTIifQ.eyJqdGkiOiI1MDE5MjIxMSIsInJvbCI6IlJPTEVfUkVHSVNURVIiLCJpc3MiOiJPcGVuWExhYiIsImlhdCI6MTczMzY2NzE1OSwiY2xpZW50SWQiOiJlYm1ydm9kNnlvMG5semFlazF5cCIsInBob25lIjoiMTkxMjE3NTE2NDAiLCJ1dWlkIjoiMDQwZjQwY2EtMGNlYS00ZTMyLWE0ZGQtZTA3ODhjMWIxMTdkIiwiZW1haWwiOiIiLCJleHAiOjE3NDkyMTkxNTl9.qS-jrnLHPyd2Bs2XqOBaeVPY7yh_OaEEw0i8MCTwHfo6GTo_hI4d1voS3LjdyGb156JfPwGYei_sv8GDJ1Bjww";//env.value("OPENAI_API_KEY");sk-2f9a7fa7e08a4808a3a85a5603943d5a
+    QString apiKey = "";//env.value("OPENAI_API_KEY");sk-2f9a7fa7e08a4808a3a85a5603943d5a
 
     if (apiKey.isEmpty()) {
         qWarning() << "Error: OPENAI_API_KEY environment variable is not set.";
@@ -81,7 +81,7 @@ ChatClientWindow::ChatClientWindow(QWidget *parent)
 
     // Set default API key for the image generator
     chatClient->setApiKey(apiKey); // Replace with your OpenAI API key
-    QString apiKey2 = "sk-ikldtxdvejnfdemczvyribrzyawpgjvefvfrvvlvfxolpwkf";//"sk-2f9a7fa7e08a4808a3a85a5603943d5a";
+    QString apiKey2 = "";
     imageGenerator->setApiKey(apiKey2);
 }
 
